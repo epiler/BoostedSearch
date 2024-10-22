@@ -14,7 +14,7 @@ public class Producto {
 	private double precioProvedor;
 	private double precioTienda;
 	
-	//Constructor sin parametros 
+	//Constructor sin parametros
 	public Producto() {
 	
 	}

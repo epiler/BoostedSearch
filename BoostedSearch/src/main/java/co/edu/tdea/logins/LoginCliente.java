@@ -55,7 +55,7 @@ public class LoginCliente extends JFrame {
 		setResizable(false);
 		setTitle("Boosted Search");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 490, 345);
+		setBounds(100, 100, 502, 347);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 
