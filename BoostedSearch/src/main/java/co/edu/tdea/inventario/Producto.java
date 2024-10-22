@@ -6,27 +6,31 @@ public class Producto {
 	
 	//Atributos
 	
-	String nombre;
-	int cantidad;
-	String fechaSolicitud;
-	String codigo;
-	String proveedor;
+	private String nombre;
+	private int cantidad;
+	private String fechaSolicitud;
+	private String codigo;
+	private String proveedor;
+	private double precioProvedor;
+	private double precioTienda;
 	
-	//Constructor sin parametros
+	//Constructor sin parametros 
 	public Producto() {
 	
 	}
-	 
-	//Constructor con parametros
-	public Producto(String nombre, int cantidad, String fechaSolicitud, String codigo, String proveedor) {
+
+	public Producto(String nombre, int cantidad, String fechaSolicitud, String codigo, String proveedor,
+			double precioProvedor, double precioTienda) {
+		super();
 		this.nombre = nombre;
 		this.cantidad = cantidad;
 		this.fechaSolicitud = fechaSolicitud;
 		this.codigo = codigo;
 		this.proveedor = proveedor;
+		this.precioProvedor = precioProvedor;
+		this.precioTienda = precioTienda;
 	}
-	//Getters and Setters 
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -51,7 +55,7 @@ public class Producto {
 		this.fechaSolicitud = fechaSolicitud;
 	}
 
-	public String getCodigo() { 
+	public String getCodigo() {
 		return codigo;
 	}
 
@@ -66,4 +70,22 @@ public class Producto {
 	public void setProveedor(String proveedor) {
 		this.proveedor = proveedor;
 	}
+
+	public double getPrecioProvedor() {
+		return precioProvedor;
 	}
+
+	public void setPrecioProvedor(double precioProvedor) {
+		this.precioProvedor = precioProvedor;
+	}
+
+	public double getPrecioTienda() {
+		return precioTienda;
+	}
+
+	public void setPrecioTienda(double precioTienda) {
+		this.precioTienda = precioTienda;
+	}
+	 
+	
+}
