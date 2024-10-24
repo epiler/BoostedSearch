@@ -57,82 +57,95 @@ import javax.swing.border.LineBorder;
 	        contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
 	        setContentPane(contentPane);
 	        contentPane.setLayout(null);
-
-	        JLabel lblTitle = new JLabel("Ingreso de Productos");
-	        lblTitle.setFont(new Font("Arial Black", Font.BOLD, 20));
-	        lblTitle.setBounds(150, 10, 300, 30);
-	        contentPane.add(lblTitle);
+	        
+	        JPanel panel = new JPanel();
+	        panel.setBackground(new Color(99, 67, 148));
+	        panel.setBounds(0, 0, 584, 70);
+	        contentPane.add(panel);
+	        panel.setLayout(null);
+	        
+	        JLabel lblNewLabel = new JLabel("Ingreso de productos");
+	        lblNewLabel.setForeground(new Color(255, 255, 255));
+	        lblNewLabel.setFont(new Font("Yu Gothic", Font.BOLD, 30));
+	        lblNewLabel.setBounds(122, 22, 334, 48);
+	        panel.add(lblNewLabel);
 
 	        JLabel lblNombre = new JLabel("Producto:");
-	        lblNombre.setBounds(30, 60, 100, 25);
+	        lblNombre.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblNombre.setBounds(105, 104, 100, 25);
 	        contentPane.add(lblNombre);
 
 	        textFieldNombre = new JTextField();
-	        textFieldNombre.setBounds(150, 60, 200, 25);
+	        textFieldNombre.setBounds(259, 104, 200, 25);
 	        contentPane.add(textFieldNombre);
 
 	        JLabel lblCantidad = new JLabel("Cantidad:");
-	        lblCantidad.setBounds(30, 100, 100, 25);
+	        lblCantidad.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblCantidad.setBounds(105, 144, 100, 25);
 	        contentPane.add(lblCantidad);
 
 	        textFieldCantidad = new JTextField();
-	        textFieldCantidad.setBounds(150, 100, 200, 25);
+	        textFieldCantidad.setBounds(259, 144, 200, 25);
 	        contentPane.add(textFieldCantidad);
 
 	        JLabel lblFecha = new JLabel("Fecha de ingreso:");
-	        lblFecha.setBounds(30, 140, 120, 25);
+	        lblFecha.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblFecha.setBounds(105, 184, 120, 25);
 	        contentPane.add(lblFecha);
 
 	        textFieldFecha = new JTextField();
-	        textFieldFecha.setBounds(150, 140, 200, 25);
+	        textFieldFecha.setBounds(259, 184, 200, 25);
 	        contentPane.add(textFieldFecha);
 
 	        JLabel lblCodigo = new JLabel("Código:");
-	        lblCodigo.setBounds(30, 180, 100, 25);
+	        lblCodigo.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblCodigo.setBounds(105, 224, 100, 25);
 	        contentPane.add(lblCodigo);
 
 	        textFieldCodigo = new JTextField();
-	        textFieldCodigo.setBounds(150, 180, 200, 25);
+	        textFieldCodigo.setBounds(259, 224, 200, 25);
 	        contentPane.add(textFieldCodigo);
 
 	        JLabel lblProveedor = new JLabel("Proveedor:");
-	        lblProveedor.setBounds(30, 220, 100, 25);
+	        lblProveedor.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblProveedor.setBounds(105, 264, 100, 25);
 	        contentPane.add(lblProveedor);
 
 	        textFieldProveedor = new JTextField();
-	        textFieldProveedor.setBounds(150, 220, 200, 25);
+	        textFieldProveedor.setBounds(259, 264, 200, 25);
 	        contentPane.add(textFieldProveedor);
 
 	        //Campos para los precios
 	        JLabel lblPrecioProveedor = new JLabel("Precio Proveedor:");
-	        lblPrecioProveedor.setBounds(30, 260, 120, 25);
+	        lblPrecioProveedor.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblPrecioProveedor.setBounds(105, 304, 120, 25);
 	        contentPane.add(lblPrecioProveedor);
 
 	        textFieldPrecioProveedor = new JTextField();
-	        textFieldPrecioProveedor.setBounds(150, 260, 200, 25);
+	        textFieldPrecioProveedor.setBounds(259, 304, 200, 25);
 	        contentPane.add(textFieldPrecioProveedor);
 
 	        JLabel lblPrecioTienda = new JLabel("Precio Tienda:");
-	        lblPrecioTienda.setBounds(30, 300, 120, 25);
+	        lblPrecioTienda.setFont(new Font("Yu Gothic", Font.BOLD, 13));
+	        lblPrecioTienda.setBounds(105, 344, 120, 25);
 	        contentPane.add(lblPrecioTienda);
 
 	        textFieldPrecioTienda = new JTextField();
-	        textFieldPrecioTienda.setBounds(150, 300, 200, 25);
+	        textFieldPrecioTienda.setBounds(259, 344, 200, 25);
 	        contentPane.add(textFieldPrecioTienda);
 
 	        // Panel para los botones
 	        JPanel panelBotones = new JPanel();
-	        panelBotones.setBounds(30, 340, 500, 40);
+	        panelBotones.setBounds(28, 384, 500, 40);
 	        contentPane.add(panelBotones);
 
 	        JButton btnIngresar = new JButton("Ingresar");
+	        btnIngresar.setFont(new Font("Yu Gothic", Font.BOLD, 11));
 	        panelBotones.add(btnIngresar);
 
 	        JButton btnMostrar = new JButton("Mostrar Inventario");
+	        btnMostrar.setFont(new Font("Yu Gothic", Font.BOLD, 11));
 	        panelBotones.add(btnMostrar);
-
-	        JButton btnCancelar = new JButton("Limpiar");
-	        panelBotones.add(btnCancelar);
 
 	        // Configuración de la tabla
 	        tableModel = new DefaultTableModel();
@@ -170,17 +183,6 @@ import javax.swing.border.LineBorder;
 	        });
 
 	        btnMostrar.addActionListener(e -> mostrarInventario());
-
-	        btnCancelar.addActionListener(e -> {
-	            // Limpiar campos de texto
-	            textFieldNombre.setText("");
-	            textFieldCantidad.setText("");
-	            textFieldFecha.setText("");
-	            textFieldCodigo.setText("");
-	            textFieldProveedor.setText("");
-	            textFieldPrecioProveedor.setText("");
-	            textFieldPrecioTienda.setText("");
-	        });
 	    }
 
 	    private void mostrarInventario() {

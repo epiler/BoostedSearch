@@ -1,4 +1,4 @@
-//Paquetes y librerias
+			//Paquetes y librerias
 package co.edu.tdea.inventario;
 
 //Clase producto
@@ -14,7 +14,7 @@ public class Producto {
 	private double precioProvedor;
 	private double precioTienda;
 	
-	//Constructor sin parametros
+	//Constructor sin parametros 
 	public Producto() {
 	
 	}
