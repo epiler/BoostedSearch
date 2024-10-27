@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import co.edu.tdea.inventario.IngresoProductos;
+import co.edu.tdea.inventory.IngresoProductos;
 
 import java.awt.Color;
 import javax.swing.JButton;

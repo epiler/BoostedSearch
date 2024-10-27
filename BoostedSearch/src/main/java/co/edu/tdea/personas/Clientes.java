@@ -39,7 +39,7 @@ public class Clientes extends JFrame {
 					e.printStackTrace();
 				}
 			}
-		});
+		}); 
 	}
 
 	/**

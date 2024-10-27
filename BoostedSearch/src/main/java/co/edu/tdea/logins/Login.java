@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
-import co.edu.tdea.inventario.IngresoProductos;
+import co.edu.tdea.inventory.IngresoProductos;
 import co.edu.tdea.personas.Empleados;
 
 import java.awt.Font;
@@ -30,7 +30,7 @@ public class Login extends JFrame {
 	 private JComboBox comboBox;
 
 	
-	 
+	  
 	 public Login() {
 	        setResizable(false);
 	        setTitle("Boosted Search");
