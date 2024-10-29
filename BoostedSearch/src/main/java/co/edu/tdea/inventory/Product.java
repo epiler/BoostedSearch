@@ -56,7 +56,7 @@ public class Product {
 	public void setApplicationDate(String applicationDate) {
 		this.applicationDate = applicationDate;
 	}
-
+											
 	public String getCode() {
 		return code;
 	}

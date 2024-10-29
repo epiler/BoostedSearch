@@ -6,9 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
-
-import co.edu.tdea.inventory.IngresoProductos;
-import co.edu.tdea.personas.Empleados;
+import co.edu.tdea.persons.Employees;
 
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -24,10 +22,10 @@ public class Login extends JFrame {
 
 	 private static final long serialVersionUID = 1L;
 	 private JPanel contentPane;
-	 private JTextField ingreseUsuario;
-	 private JPasswordField contraseñaLogin;
-	 private Button botonLogin;
-	 private JComboBox comboBox;
+	 private JTextField userLogin;
+	 private JPasswordField passwordLogin;
+	 private Button btnLogin;
+	 private JComboBox optionBox;
 
 	
 	  
@@ -48,50 +46,50 @@ public class Login extends JFrame {
 	        contentPane.add(panel);
 	        panel.setLayout(null);
 
-	        JLabel NombreEmpresa = new JLabel("BetterYou");
-	        NombreEmpresa.setForeground(new Color(255, 255, 255));
-	        NombreEmpresa.setFont(new Font("Yu Gothic", Font.BOLD, 16));
-	        NombreEmpresa.setBounds(66, 215, 82, 24);
-	        panel.add(NombreEmpresa);
+	        JLabel CompanyName = new JLabel("BetterYou");
+	        CompanyName.setForeground(new Color(255, 255, 255));
+	        CompanyName.setFont(new Font("Yu Gothic", Font.BOLD, 16));
+	        CompanyName.setBounds(66, 215, 82, 24);
+	        panel.add(CompanyName);
 
-	        JLabel iconoLogin = new JLabel("");
-	        iconoLogin.setBounds(-156, 70, 348, 129);
-	        panel.add(iconoLogin);
-	        iconoLogin.setIcon(new ImageIcon("C:\\Users\\choju\\git\\BoostedSearch2\\BoostedSearch\\src\\main\\resources\\icono.png"));
+	        JLabel iconLogin = new JLabel("");
+	        iconLogin.setBounds(-156, 70, 348, 129);
+	        panel.add(iconLogin);
+	        iconLogin.setIcon(new ImageIcon("src/main/resources/icono.png"));
 
-	        JLabel tituloLogin = new JLabel("Login");
-	        tituloLogin.setFont(new Font("Yu Gothic", Font.BOLD, 21));
-	        tituloLogin.setBounds(311, 54, 56, 31);
-	        contentPane.add(tituloLogin);
+	        JLabel titleLogin = new JLabel("Login");
+	        titleLogin.setFont(new Font("Yu Gothic", Font.BOLD, 21));
+	        titleLogin.setBounds(311, 54, 56, 31);
+	        contentPane.add(titleLogin);
 
-	        JLabel usuario = new JLabel("USUARIO");
-	        usuario.setFont(new Font("Yu Gothic", Font.BOLD, 11));
-	        usuario.setBounds(316, 114, 51, 14);
-	        contentPane.add(usuario);
+	        JLabel user = new JLabel("USUARIO");
+	        user.setFont(new Font("Yu Gothic", Font.BOLD, 11));
+	        user.setBounds(316, 114, 51, 14);
+	        contentPane.add(user);
 
-	        ingreseUsuario = new JTextField();
-	        ingreseUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-	        ingreseUsuario.setFont(new Font("Yu Gothic", Font.PLAIN, 11));
-	        ingreseUsuario.setText("Ingrese su nombre de usuario");
-	        ingreseUsuario.setForeground(new Color(128, 128, 128));
-	        ingreseUsuario.setBounds(264, 139, 160, 20);
-	        contentPane.add(ingreseUsuario);
-	        ingreseUsuario.setColumns(10);
+	        userLogin = new JTextField();
+	        userLogin.setHorizontalAlignment(SwingConstants.CENTER);
+	        userLogin.setFont(new Font("Yu Gothic", Font.PLAIN, 11));
+	        userLogin.setText("Ingrese su nombre de usuario");
+	        userLogin.setForeground(new Color(128, 128, 128));
+	        userLogin.setBounds(264, 139, 160, 20);
+	        contentPane.add(userLogin);
+	        userLogin.setColumns(10);
 
-	        JLabel contraseña = new JLabel("CONTRASEÑA");
-	        contraseña.setFont(new Font("Yu Gothic", Font.BOLD, 11));
-	        contraseña.setBounds(305, 170, 79, 20);
-	        contentPane.add(contraseña);
+	        JLabel password = new JLabel("CONTRASEÑA");
+	        password.setFont(new Font("Yu Gothic", Font.BOLD, 11));
+	        password.setBounds(305, 170, 79, 20);
+	        contentPane.add(password);
 
-	        botonLogin = new Button("Entrar");
-	        botonLogin.setFont(new Font("Yu Gothic", Font.BOLD, 10));
-	        botonLogin.addActionListener(new ActionListener() {
+	        btnLogin = new Button("Entrar");
+	        btnLogin.setFont(new Font("Yu Gothic", Font.BOLD, 10));
+	        btnLogin.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
 	            	
 	            	
-	            	if(comboBox.getSelectedItem().equals("Empleado")) {
+	            	if(optionBox.getSelectedItem().equals("Empleado")) {
 	            		
-	            		Empleados frame = new Empleados();
+	            		Employees frame = new Employees();
 						frame.setVisible(true);
 						dispose();
 		                
@@ -106,20 +104,20 @@ public class Login extends JFrame {
 	            }
 	        });
 
-	        botonLogin.setForeground(new Color(255, 255, 255));
-	        botonLogin.setBackground(new Color(99, 67, 148));
-	        botonLogin.setBounds(365, 256, 70, 22);
-	        contentPane.add(botonLogin);
+	        btnLogin.setForeground(new Color(255, 255, 255));
+	        btnLogin.setBackground(new Color(99, 67, 148));
+	        btnLogin.setBounds(365, 256, 70, 22);
+	        contentPane.add(btnLogin);
 
-	        contraseñaLogin = new JPasswordField();
-	        contraseñaLogin.setBounds(264, 201, 160, 20);
-	        contentPane.add(contraseñaLogin);
+	        passwordLogin = new JPasswordField();
+	        passwordLogin.setBounds(264, 201, 160, 20);
+	        contentPane.add(passwordLogin);
 	        
-	        comboBox = new JComboBox();
-	        comboBox.setModel(new DefaultComboBoxModel(new String[] { "Cliente", "Empleado" }));
+	        optionBox = new JComboBox();
+	        optionBox.setModel(new DefaultComboBoxModel(new String[] { "Cliente", "Empleado" }));
 	        
-	        comboBox.setFont(new Font("Yu Gothic", Font.BOLD, 10));
-	        comboBox.setBounds(251, 256, 79, 22);
-	        contentPane.add(comboBox);
+	        optionBox.setFont(new Font("Yu Gothic", Font.BOLD, 10));
+	        optionBox.setBounds(251, 256, 79, 22);
+	        contentPane.add(optionBox);
 	    }
 	}

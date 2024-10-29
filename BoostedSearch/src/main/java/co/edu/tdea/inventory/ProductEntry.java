@@ -20,8 +20,13 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+
+import co.edu.tdea.persons.Employees;
+
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 	//Clase
 	public class ProductEntry extends JFrame {
@@ -140,6 +145,17 @@ import javax.swing.border.LineBorder;
 	         panelButtons.add(btnShow);
 	         
 	         JButton btnGoBack = new JButton("Go back");
+	         btnGoBack.addActionListener(new ActionListener() {
+	         	public void actionPerformed(ActionEvent e) {
+	         		
+	         		Employees frame = new Employees();
+					frame.setVisible(true);
+					dispose();
+	                
+	         		
+	         		
+	         	}
+	         });
 	         btnGoBack.setFont(new Font ("Yu gothic", Font.BOLD, 11));
 	         panelButtons.add(btnGoBack);
 

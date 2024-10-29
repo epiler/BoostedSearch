@@ -1,4 +1,4 @@
-package co.edu.tdea.personas;
+package co.edu.tdea.persons;
 
 import java.awt.EventQueue;
 
