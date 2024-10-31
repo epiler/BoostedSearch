@@ -56,16 +56,16 @@ import java.awt.event.ActionEvent;
 	         contentPane.setLayout(null);
 
 	         JPanel panel = new JPanel();
-	         panel.setBackground(Color.BLACK);
+	         panel.setBackground(new Color(99, 67, 148));
 	         panel.setBounds(0, 0, 584, 70);
 	         contentPane.add(panel);
 	         panel.setLayout(null);
 
-	         JLabel lblNewLabel = new JLabel("Product entry");
-	         lblNewLabel.setForeground(new Color(255, 255, 255));
-	         lblNewLabel.setFont(new Font("Yu Gothic", Font.BOLD, 30));
-	         lblNewLabel.setBounds(122, 22, 334, 48);
-	         panel.add(lblNewLabel);
+	         JLabel lblProductEntry = new JLabel("Product entry");
+	         lblProductEntry.setForeground(new Color(255, 255, 255));
+	         lblProductEntry.setFont(new Font("Yu Gothic", Font.BOLD, 30));
+	         lblProductEntry.setBounds(176, 22, 206, 48);
+	         panel.add(lblProductEntry);
 
 	         JLabel lblName = new JLabel("Product:");
 	         lblName.setFont(new Font("Yu Gothic", Font.BOLD, 13));
@@ -152,8 +152,6 @@ import java.awt.event.ActionEvent;
 					frame.setVisible(true);
 					dispose();
 	                
-	         		
-	         		
 	         	}
 	         });
 	         btnGoBack.setFont(new Font ("Yu gothic", Font.BOLD, 11));
@@ -226,7 +224,7 @@ import java.awt.event.ActionEvent;
 	         JLabel title = new JLabel("Inventory", SwingConstants.CENTER);
 	         title.setFont(new Font("Yu Gothic", Font.BOLD, 24));
 	         title.setOpaque(true);
-	         title.setBackground(Color.BLACK);
+	         title.setBackground (new Color(99, 67, 148));
 	         title.setForeground(Color.WHITE);
 	         panel.add(title, BorderLayout.NORTH);
 
@@ -239,8 +237,8 @@ import java.awt.event.ActionEvent;
 	         // Estilizar la cabecera de la tabla
 	         JTableHeader header = inventoryTable.getTableHeader();
 	         header.setFont(new Font("Yu Gothic", Font.BOLD, 14));
-	         header.setBackground(Color.BLACK);
-	         header.setForeground(Color.BLACK);
+	         header.setBackground (new Color(99, 67, 148));
+	         header.setForeground(Color.WHITE);
 	         header.setOpaque(true);
 	         
 	      // Ajustar el ancho de las columnas

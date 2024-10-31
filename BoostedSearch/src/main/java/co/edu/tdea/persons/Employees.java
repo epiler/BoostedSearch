@@ -6,7 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import co.edu.tdea.inventory.Inventory;
 import co.edu.tdea.inventory.ProductEntry;
+import co.edu.tdea.logins.Login;
 
 import java.awt.Color;
 import javax.swing.JButton;
@@ -18,6 +20,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
+import javax.swing.ImageIcon;
 
 public class Employees extends JFrame {
 
@@ -30,13 +33,14 @@ public class Employees extends JFrame {
 		setBounds(100, 100, 556, 401);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBackground(new Color(128, 128, 192));
+		menuBar.setBackground(new Color(255, 255, 255));
 		setJMenuBar(menuBar);
 		
-		JMenu EMenu = new JMenu("Opciones");
+		JMenu EMenu = new JMenu("Options");
+		EMenu.setFont(new Font("Yu Gothic", Font.BOLD, 12));
 		menuBar.add(EMenu);
 		
-		JMenuItem MenRegisterProducts = new JMenuItem("Ingresar Productos");
+		JMenuItem MenRegisterProducts = new JMenuItem("Enter products");
 		EMenu.add(MenRegisterProducts);
 		MenRegisterProducts.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
@@ -50,45 +54,69 @@ public class Employees extends JFrame {
 		JSeparator separator = new JSeparator();
 		EMenu.add(separator);
 		
-		JMenuItem MenShow = new JMenuItem("Mostrar Inventario");
+		JMenuItem MenShow = new JMenuItem("Show products");
 		EMenu.add(MenShow);
+		
+		
+	
+		/**MenShow.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		      
+		        Inventory inventoryFrame = new Inventory();
+		        inventoryFrame.setVisible(true); 
+		        dispose();
+		    }
+		});**/
+
+		
+		
+		
+		
+		
+		
+		JSeparator separator_1 = new JSeparator();
+		EMenu.add(separator_1);
+		
+		JMenuItem MenGoBack = new JMenuItem("Go Back");
+		EMenu.add(MenGoBack);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		MenGoBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Login frame = new Login();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		
+		
+		
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(99, 67, 148));
-		panel.setBounds(0, 0, 540, 103);
+		panel.setBounds(0, 0, 540, 340);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel Employees = new JLabel("Empleados");
-		Employees.setBounds(175, 28, 178, 53);
+		JLabel Employees = new JLabel("Employees");
+		Employees.setBounds(179, 25, 178, 53);
 		panel.add(Employees);
 		Employees.setForeground(new Color(255, 255, 255));
 		Employees.setFont(new Font("Yu Gothic", Font.BOLD, 32));
 		
-		JButton btnRegisterProducts = new JButton("Ingresar productos");
-		btnRegisterProducts.setFont(new Font("Yu Gothic", Font.BOLD, 11));
-		btnRegisterProducts.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				ProductEntry frame = new ProductEntry();
-				frame.setVisible(true);
-				dispose();
-				
-	
-				
-			}
-		});
-		btnRegisterProducts.setBounds(85, 270, 136, 25);
-		contentPane.add(btnRegisterProducts);
+		JLabel EmployeesImg = new JLabel("");
+		EmployeesImg.setIcon(new ImageIcon("C:\\Users\\choju\\Downloads\\EmpleadoR.png"));
+		EmployeesImg.setBounds(41, 103, 353, 312);
+		panel.add(EmployeesImg);
 		
-		JButton btnShow = new JButton("Mostrar Inventario");
-		btnShow.setFont(new Font("Yu Gothic", Font.BOLD, 11));
-		btnShow.setBounds(311, 270, 131, 27);
-		contentPane.add(btnShow);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\choju\\Downloads\\flechaR.png"));
+		lblNewLabel.setBounds(-97, -29, 212, 162);
+		panel.add(lblNewLabel);
 	}
 }

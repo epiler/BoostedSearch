@@ -6,6 +6,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+
+import co.edu.tdea.inventory.Inventory;
+import co.edu.tdea.persons.Customers;
 import co.edu.tdea.persons.Employees;
 
 import java.awt.Font;
@@ -62,32 +65,32 @@ public class Login extends JFrame {
 	        titleLogin.setBounds(311, 54, 56, 31);
 	        contentPane.add(titleLogin);
 
-	        JLabel user = new JLabel("USUARIO");
+	        JLabel user = new JLabel("USER");
 	        user.setFont(new Font("Yu Gothic", Font.BOLD, 11));
-	        user.setBounds(316, 114, 51, 14);
+	        user.setBounds(325, 114, 30, 14);
 	        contentPane.add(user);
 
 	        userLogin = new JTextField();
 	        userLogin.setHorizontalAlignment(SwingConstants.CENTER);
 	        userLogin.setFont(new Font("Yu Gothic", Font.PLAIN, 11));
-	        userLogin.setText("Ingrese su nombre de usuario");
+	        userLogin.setText("Username");
 	        userLogin.setForeground(new Color(128, 128, 128));
 	        userLogin.setBounds(264, 139, 160, 20);
 	        contentPane.add(userLogin);
 	        userLogin.setColumns(10);
 
-	        JLabel password = new JLabel("CONTRASEÑA");
+	        JLabel password = new JLabel("PASSWORD");
 	        password.setFont(new Font("Yu Gothic", Font.BOLD, 11));
 	        password.setBounds(305, 170, 79, 20);
 	        contentPane.add(password);
 
-	        btnLogin = new Button("Entrar");
+	        btnLogin = new Button("ENTER");
 	        btnLogin.setFont(new Font("Yu Gothic", Font.BOLD, 10));
 	        btnLogin.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
 	            	
 	            	
-	            	if(optionBox.getSelectedItem().equals("Empleado")) {
+	            	if(optionBox.getSelectedItem().equals("Employee")) {
 	            		
 	            		Employees frame = new Employees();
 						frame.setVisible(true);
@@ -95,7 +98,11 @@ public class Login extends JFrame {
 		                
 	            		
 	            	}else {
-	            		 JOptionPane.showMessageDialog(null,"aaaaaa");
+	            		
+	            		Inventory inventory = new Inventory(); 
+	                    Customers frame = new Customers(); 
+	                    frame.setVisible(true);
+	                    dispose();      	
 	            	}
 	            	
 	            	
@@ -114,7 +121,7 @@ public class Login extends JFrame {
 	        contentPane.add(passwordLogin);
 	        
 	        optionBox = new JComboBox();
-	        optionBox.setModel(new DefaultComboBoxModel(new String[] { "Cliente", "Empleado" }));
+	        optionBox.setModel(new DefaultComboBoxModel(new String[] {"Client", "Employee"}));
 	        
 	        optionBox.setFont(new Font("Yu Gothic", Font.BOLD, 10));
 	        optionBox.setBounds(251, 256, 79, 22);
