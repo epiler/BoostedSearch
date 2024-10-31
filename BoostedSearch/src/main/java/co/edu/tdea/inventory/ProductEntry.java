@@ -1,5 +1,3 @@
-//Paquetes y librerias
-
 package co.edu.tdea.inventory;
 
 import java.awt.EventQueue;
@@ -21,6 +19,7 @@ import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+import co.edu.tdea.persons.Customers;
 import co.edu.tdea.persons.Employees;
 
 import javax.swing.JTable;
@@ -144,18 +143,17 @@ import java.awt.event.ActionEvent;
 	         btnShow.setFont(new Font("Yu Gothic", Font.BOLD, 11));
 	         panelButtons.add(btnShow);
 	         
-	         JButton btnGoBack = new JButton("Go back");
-	         btnGoBack.addActionListener(new ActionListener() {
-	         	public void actionPerformed(ActionEvent e) {
-	         		
-	         		Employees frame = new Employees();
-					frame.setVisible(true);
-					dispose();
-	                
-	         	}
-	         });
-	         btnGoBack.setFont(new Font ("Yu gothic", Font.BOLD, 11));
-	         panelButtons.add(btnGoBack);
+	         JButton btnCView = new JButton("Customer view");
+	         btnCView.addActionListener(new ActionListener() {
+	        	    public void actionPerformed(ActionEvent e) {
+	        	        Customers customersFrame = new Customers(inventory); // Pasar la instancia de Inventory
+	        	        customersFrame.setVisible(true);
+	        	        dispose();
+	        	    }
+	        	});
+
+	         btnCView.setFont(new Font ("Yu gothic", Font.BOLD, 11));
+	         panelButtons.add(btnCView);
 
 	         // Configuración de la tabla
 	         tableModel = new DefaultTableModel();
@@ -269,11 +267,3 @@ import java.awt.event.ActionEvent;
 	         setVisible(false);
 	         }
 	     }
-
-	
-	 
-	
-	
-	
-
-

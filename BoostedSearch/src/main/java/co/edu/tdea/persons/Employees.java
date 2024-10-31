@@ -57,22 +57,7 @@ public class Employees extends JFrame {
 		JMenuItem MenShow = new JMenuItem("Show products");
 		EMenu.add(MenShow);
 		
-		
 	
-		/**MenShow.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		      
-		        Inventory inventoryFrame = new Inventory();
-		        inventoryFrame.setVisible(true); 
-		        dispose();
-		    }
-		});**/
-
-		
-		
-		
-		
-		
 		
 		JSeparator separator_1 = new JSeparator();
 		EMenu.add(separator_1);
@@ -93,6 +78,12 @@ public class Employees extends JFrame {
 		
 		
 		
+		
+		
+		
+		
+		
+		
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -110,12 +101,12 @@ public class Employees extends JFrame {
 		Employees.setFont(new Font("Yu Gothic", Font.BOLD, 32));
 		
 		JLabel EmployeesImg = new JLabel("");
-		EmployeesImg.setIcon(new ImageIcon("C:\\Users\\choju\\Downloads\\EmpleadoR.png"));
+		EmployeesImg.setIcon(new ImageIcon("src/main/resources/EmpleadoR.png"));
 		EmployeesImg.setBounds(41, 103, 353, 312);
 		panel.add(EmployeesImg);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\choju\\Downloads\\flechaR.png"));
+		lblNewLabel.setIcon(new ImageIcon("src/main/resources/flechaR.png"));
 		lblNewLabel.setBounds(-97, -29, 212, 162);
 		panel.add(lblNewLabel);
 	}

@@ -5,9 +5,11 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
 import co.edu.tdea.inventory.Inventory;
+import co.edu.tdea.inventory.ProductEntry;
 import co.edu.tdea.persons.Customers;
 import co.edu.tdea.persons.Employees;
 
@@ -30,9 +32,13 @@ public class Login extends JFrame {
 	 private Button btnLogin;
 	 private JComboBox optionBox;
 
+
 	
 	  
 	 public Login() {
+		 
+		 
+		 
 	        setResizable(false);
 	        setTitle("Boosted Search");
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,10 +105,9 @@ public class Login extends JFrame {
 	            		
 	            	}else {
 	            		
-	            		Inventory inventory = new Inventory(); 
-	                    Customers frame = new Customers(); 
-	                    frame.setVisible(true);
-	                    dispose();      	
+	            		
+	            		
+	            		   	
 	            	}
 	            	
 	            	
@@ -110,6 +115,8 @@ public class Login extends JFrame {
 	                
 	            }
 	        });
+	        
+	
 
 	        btnLogin.setForeground(new Color(255, 255, 255));
 	        btnLogin.setBackground(new Color(99, 67, 148));
